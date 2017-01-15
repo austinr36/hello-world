@@ -1,33 +1,33 @@
 size ( 400, 460) ;
 fill ( 0) ;
-beginShape () ; // start of body, custom shape
-vertex (80, 280) ;
-vertex (80, 400) ;
-vertex (180, 400) ;
-vertex (180, 280) ;
-endShape (); // end custom shape
+int hrec = 280 ;
+int hcirc = 190 ;
+int lengthr = 120 ;
+//body rectangle
+fill (0) ;
+rect (80, hrec, 100, lengthr) ; 
 // rectangle in body
 fill (155, 151, 151) ; 
-rect ( 80, 300, 100, 7 ) ;
+rect ( 80, hrec + 20, 100, 7 ) ;
 //arc, same color as rectangle
-arc (130, 400, 60, 60, 0, PI) ;
+arc (130, lengthr + hrec, 60, 60, 0, PI) ;
 // lines, all black overcompensate to be covered by the circle
 fill (0) ;
-line(150, 190, 189, 120) ;
-line(150, 190, 124, 160) ;
-line(150, 190, 200, 205) ;
-line(150, 190, 150, 280 ) ;
-line ( 165, 280, 165, 200) ;
-line ( 135, 280, 135, 200) ;
+line(150, hcirc, 189, hcirc -70) ;
+line(150, hcirc, 124, hcirc - 30) ;
+line(150, hcirc, 200, hcirc + 25) ;
+line(150, hcirc, 150, hrec ) ;
+line ( 165, hrec, 165, hcirc) ;
+line ( 135, hrec, 135, hcirc) ;
 // circle for head
 fill (0) ;
-ellipse (150, 190, 63, 63) ;
+ellipse (150, hcirc, 63, 63) ;
 // facial features 
 fill ( 255,255, 255) ;
-ellipse (160, 185, 15, 15) ;
+ellipse (160, hcirc -5, 15, 15) ;
 fill (0) ;
-ellipse (160, 185, 5, 5) ;
+ellipse (160, hcirc -5, 5, 5) ;
 fill (155, 151, 151) ; 
-ellipse (143, 183, 8, 8) ;
-ellipse (163, 171, 6, 6) ;
-ellipse (172, 190, 3, 3) ;
+ellipse (143, hcirc -7, 8, 8) ;
+ellipse (163, hcirc -19, 6, 6) ;
+ellipse (172, hcirc, 3, 3) ;
