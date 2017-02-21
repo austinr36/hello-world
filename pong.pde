@@ -10,6 +10,7 @@ float random2 = 0 ;
 float random3 = 0 ;
 
 
+
 void setup() {
   size (400, 400) ;
   smooth() ;
@@ -19,6 +20,8 @@ void setup() {
 
 
 void draw() {
+  float millis = millis () ;
+  float timer = millis / 1000 ;
   background(256 -random1 , 256 - random2, 256- random3) ;
   fill (random1, random2, random3) ;
   textSize (15) ;
@@ -26,7 +29,8 @@ void draw() {
   text ("Austin Rath's Pong", 250, 35) ;
   ellipse (ballX, ballY, 20, 20) ;
   rect(mouseX -40 , height -20, 80, 20, 5) ;
-  
+  text (timer , 115, 35) ;
+  println (timer) ;
   ballmovement () ;
   paddle (); 
   respawn () ;
