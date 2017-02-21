@@ -19,14 +19,12 @@ void setup() {
 
 
 void draw() {
-  background(255) ;
+  background(256 -random1 , 256 - random2, 256- random3) ;
   fill (random1, random2, random3) ;
   textSize (15) ;
   text (counter , 30 , 35) ; // counter
-  textSize (15) ;
   text ("Austin Rath's Pong", 250, 35) ;
   ellipse (ballX, ballY, 20, 20) ;
-  fill (random3, random2, random1) ;
   rect(mouseX -40 , height -20, 80, 20, 5) ;
   
   ballmovement () ;
