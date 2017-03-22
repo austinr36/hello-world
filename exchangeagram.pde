@@ -9,7 +9,7 @@ void setup () {
 }
 
 void draw () {
- image (eng, 200, 0) ;
+ image (eng, 200, 0, 400, 400) ;
 } 
 
 
